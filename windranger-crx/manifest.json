@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "Windranger",
+  "version": "1.0.0",
+  "description": "It's a simple version shadowsocks.",
+  "icons": {
+    "16": "image/ssicon.png",
+    "48": "image/ssicon.png",
+    "128": "image/ssicon.png"
+  },
+
+  "browser_action": {
+    "default_icon": "image/ssicon.png",
+    "default_title": "A wind of change is blowing.",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "http://127.0.0.1:7001/*",
+    "http://*/*",
+    "https://*/*",
+    "<all_urls>"
+  ],
+
+  "background": {
+    "scripts": [
+      "js/background.js",
+      "js/jquery.js"
+    ],
+    "president": false
+  },
+
+  "content_scripts": [{
+    "matches": [
+        "<all_urls>"
+    ],
+    "js": [
+        "js/jquery.js",
+        "js/content.js"
+    ],
+    "run_at": "document_start"
+  }]
+}

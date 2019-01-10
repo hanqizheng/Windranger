@@ -1,0 +1,10 @@
+.addButton {
+  color: aliceblue;
+  height: 30px;
+  width: 100px;
+  background-color: rgb(236, 168, 79);
+  border-radius: 15px;
+  margin-top: 20px;  
+  margin-left: 40px;
+  float: center;
+}
