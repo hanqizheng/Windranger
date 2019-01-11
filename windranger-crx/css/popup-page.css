@@ -1,10 +1,78 @@
+.body {
+  height: 400px;
+  width: 300px;
+}
+.body .login p{
+  font-family: Lato,sans-serif;
+  font-weight: 320;
+  font-size: 19px;
+  color: #006920;
+  width: 177px;
+  line-height: 20px;
+  margin: 13px;
+  margin-left: 0px;
+}
+.body .login .center-text{
+  width: 200px;
+  margin: 0 auto;
+}
+
+.body .login {
+  margin-top: 25px;
+}
+
+
 .addButton {
-  color: aliceblue;
-  height: 30px;
-  width: 100px;
-  background-color: rgb(236, 168, 79);
-  border-radius: 15px;
-  margin-top: 20px;  
-  margin-left: 40px;
-  float: center;
+  margin: 0 auto;
+  width: 177px;
+  margin-top: 35px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid #11ca39;
+  color: #00992e;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.addButton:hover {
+  background-color: #00992e;
+  border-color: #00992e;
+  color: #fff;
+}
+
+.input {
+  line-height: 20px;
+  outline: none;
+  width: 200px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;  
+  border-bottom-width: 2px;
+  border-bottom-color: #d3d3d3;
+  transition: border-bottom-color 1500ms;
+}
+
+.input:focus {
+  outline: none;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom-width: 2px;
+  border-bottom-color: #36a32c;
+}
+
+.text {
+  font-family: Lato,sans-serif;
+  font-weight: 320;
+  font-size: 35px;
+  color: #197a36;
+  text-align: center;
+  margin-top: 25px;
 }
