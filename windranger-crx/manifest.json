@@ -9,6 +9,8 @@
     "128": "image/ssicon.png"
   },
 
+  "author": "hanqizheng",
+
   "browser_action": {
     "default_icon": "image/ssicon.png",
     "default_title": "A wind of change is blowing.",
