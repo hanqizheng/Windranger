@@ -1,7 +1,16 @@
 .body {
+  /* height: 400px; */
+  /* width: 300px; */
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
+
+.canvas {
   height: 400px;
   width: 300px;
 }
+
 .body .login p{
   font-family: Lato,sans-serif;
   font-weight: 320;
@@ -49,6 +58,7 @@
 
 .input {
   line-height: 20px;
+  background-color: transparent;
   outline: none;
   width: 200px;
   border-top: 0px;
