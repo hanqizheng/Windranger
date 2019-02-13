@@ -1,9 +1,9 @@
 .body {
-  /* height: 400px; */
-  /* width: 300px; */
-  position: absolute;
+  height: 380px;
+  width: 280px;
+  /* position: absolute;
   top: 5%;
-  left: 3%;
+  left: 3%; */
 }
 
 .canvas {
@@ -84,5 +84,5 @@
   font-size: 35px;
   color: #197a36;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 40px;
 }
