@@ -5,5 +5,5 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  router.get('/', controller.handler.index);
+  router.post('/request', controller.handler.handleLocalRequest);
 };

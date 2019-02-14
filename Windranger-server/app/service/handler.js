@@ -3,8 +3,8 @@
 const Service = require('egg').Service;
 
 class HandlerService extends Service {
-  async proxy() {
-    
+  async proxy(url, method) {
+    console.log(`comming proxy ${url} _ ${method}`);
   }
 }
 

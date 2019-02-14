@@ -2,7 +2,7 @@
 
 const Controller = require('egg').Controller;
 
-class HomeController extends Controller {
+class HandlerController extends Controller {
   async handleLocalRequest() {
     const url = ctx.request.body.url;
     const method = ctx.request.body.method;
@@ -11,4 +11,4 @@ class HomeController extends Controller {
   }
 }
 
-module.exports = HomeController;
+module.exports = HandlerController;

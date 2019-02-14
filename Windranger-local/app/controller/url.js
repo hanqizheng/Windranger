@@ -9,6 +9,11 @@ class UrlController extends Controller {
     const data = await ctx.service.url.requestRemoteServer(url, method);
     ctx.body = data;
   }
+
+  async test() {
+    const { ctx } = this;
+    await ctx.service.url.test();
+  }
 }
 
 module.exports = UrlController;

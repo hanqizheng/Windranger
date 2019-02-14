@@ -9,5 +9,11 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
+  config.cluster = {
+    listen: {
+      port: 1234,
+    },
+  };
+
   return config;
 };
