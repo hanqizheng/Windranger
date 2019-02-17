@@ -6,4 +6,5 @@
 module.exports = app => {
   const { router, controller } = app;
   router.post('/request', controller.handler.handleLocalRequest);
+  router.get('/test', controller.handler.test);
 };

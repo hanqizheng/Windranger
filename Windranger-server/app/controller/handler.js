@@ -3,11 +3,15 @@
 const Controller = require('egg').Controller;
 
 class HandlerController extends Controller {
-  async handleLocalRequest() {
+  async handleLocalRequest(ctx) {
     const url = ctx.request.body.url;
     const method = ctx.request.body.method;
     const data = await ctx.service.handler.proxy(url, method);
     ctx.body = data;
+  }
+
+  async test(ctx) {
+    ctx.body = 'server success!!';
   }
 }
 
