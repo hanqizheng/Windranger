@@ -1,36 +1,39 @@
 'use strict';
 
 const Service = require('egg').Service;
-const https = require('https');
+const http = require('http');
 const querystring = require('querystring');
 
 class UrlService extends Service {
-  async requestRemoteServer(url, method) {
-    console.log(url);
-    const reqBody = querystring.stringify({
-      url,
-      method,
+  async requestRemoteServer(_url, _method) {
+    console.log('-------url.requsetRemoteServer-------');
+
+    const requestData = querystring.stringify({
+      url: _url,
+      method: _method,
     });
 
-    const option = {
-      protocol: 'https:',
-      hostname: 'localhost',
-      port: '7002',
+    const options = {
+      protocol: 'http:',
+      host: '149.28.74.184',
+      port: 1234,
       path: '/request',
       method: 'POST',
-      header: {
+      headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Content-Length': Buffer.byteLength(reqBody),
+        'Content-Length': Buffer.byteLength(requestData),
       },
     };
 
-    const req = https.request(option, res => {
+    const req = http.request(options, res => {
+      console.log(`STATUS: ${res.statusCode}`);
+      console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
       res.setEncoding('utf8');
       res.on('data', chunk => {
         console.log(`BODY: ${chunk}`);
       });
       res.on('end', () => {
-        console.log('Noreq more data in response.');
+        console.log('No more data in response.\n---------------------------');
       });
     });
 
@@ -38,32 +41,8 @@ class UrlService extends Service {
       console.error(`problem with request: ${e.message}`);
     });
 
-    console.log(8888, 'yeah!');
     // write data to request body
-    req.write(reqBody);
-    req.end();
-  }
-
-  async test() {
-    console.log('-----------');
-    const option = {
-      protocol: 'https:',
-      hostname: '127.0.0.1',
-      port: '1234',
-      path: '/test',
-      method: 'GET',
-    };
-
-    let sendMsg = '';
-    const req = https.request(option, req => {
-      req.on('data', chunk => {
-        sendMsg += chunk;
-      });
-      req.on('end', () => {
-        const list = JSON.parse(sendMsg);
-        console.log(list);
-      });
-    });
+    req.write(requestData);
     req.end();
   }
 }

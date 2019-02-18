@@ -12,7 +12,8 @@ class UrlController extends Controller {
 
   async test() {
     const { ctx } = this;
-    await ctx.service.url.test();
+    ctx.status = 200;
+    ctx.body = 'success';
   }
 }
 
