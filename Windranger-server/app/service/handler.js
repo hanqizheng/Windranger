@@ -8,12 +8,13 @@ class HandlerService extends Service {
   async proxy(_url, _method) {
     const { ctx } = this;
     if (_method === 'GET') {
-
       const options = {
-        method: 'GET',
+        dataType: 'text',
       };
       const result = await ctx.curl(_url, options);
-      return result;
+      console.log('------service proxy-------');
+      console.log(result.data);
+      return result.data;
     } else if (_method === 'POST') {
       console.log('------jump in POST--------');
     } else if (_method === 'PUT') {

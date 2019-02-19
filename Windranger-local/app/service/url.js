@@ -16,11 +16,13 @@ class UrlService extends Service {
     const options = {
       method: 'POST',
       data: requestData,
-      dataType: 'json',
       contentType: 'json',
+      dataType: 'text',
     };
 
-    const result = await ctx.curl('http://127.0.0.1:1234/request', options);
+    const result = await ctx.curl('http://127.0.0.1:7002/request', options);
+    console.log('------------local service------------');
+    console.log(result);
     return result;
   }
 }

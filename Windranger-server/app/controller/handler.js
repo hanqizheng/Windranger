@@ -6,6 +6,7 @@ class HandlerController extends Controller {
   async handleLocalRequest(ctx) {
     const url = ctx.request.body.url;
     const method = ctx.request.body.method;
+    console.log('------------server handelr---------------');
     const data = await ctx.service.handler.proxy(url, method);
     ctx.body = data;
   }
