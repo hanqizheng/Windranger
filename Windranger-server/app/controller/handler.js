@@ -7,6 +7,7 @@ class HandlerController extends Controller {
     const url = ctx.request.body.url;
     const method = ctx.request.body.method;
     console.log('------------server handelr---------------');
+    console.log(url);
     const data = await ctx.service.handler.proxy(url, method);
     ctx.body = data;
   }
