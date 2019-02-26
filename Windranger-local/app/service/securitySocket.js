@@ -3,21 +3,21 @@
 const Service = require('egg').Service;
 
 class SecurityService extends Service {
-  async encodeBuffer(chunk) {
+  async encodeBuffer(chunk, encodePassword) {
     const { ctx } = this;
     if (!chunk) {
       return;
     }
-    const encode = await ctx.service.cipher.encode(chunk);
+    const encode = await ctx.service.cipher.encode(chunk, encodePassword);
     return encode;
   }
 
-  async decodeBuffer(chunk) {
+  async decodeBuffer(chunk, decodePassword) {
     const { ctx } = this;
     if (!chunk) {
       return;
     }
-    const decode = await ctx.service.cipher.decode(chunk);
+    const decode = await ctx.service.cipher.decode(chunk, decodePassword);
     return decode;
   }
 
@@ -26,7 +26,7 @@ class SecurityService extends Service {
   // }
 
   // async socketRead(socket, buffer) {
-    
+
   // }
 }
 

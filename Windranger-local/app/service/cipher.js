@@ -41,7 +41,7 @@ class CipherService extends Service {
     tempArray = generateRandom(tempArray);
 
     const passwordArray = Buffer.from(tempArray);
-    return passwordArray.toString('base64');
+    return passwordArray;
   }
 
   async decode(buffer, decodePassword) {
