@@ -8,8 +8,7 @@ chrome.webRequest.onBeforeRequest.addListener(
         type: "POST",
         dataType: "json",
         data: {
-          url: detail.url,
-          method: detail.method
+          requestData: detail,
         },
         success: (data) => {
           console.log(data);

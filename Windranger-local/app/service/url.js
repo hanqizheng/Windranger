@@ -5,24 +5,25 @@ const Service = require('egg').Service;
 // const querystring = require('querystring');
 
 class UrlService extends Service {
-  async requestRemoteServer(_url, _method) {
+  async requestRemoteServer(_data, encodePassword) {
     const { ctx } = this;
     console.log('-------url.requsetRemoteServer-------');
     const requestData = {
-      url: _url,
-      method: _method,
+      encryptData: _data.toString('base64'),
+      encode: encodePassword.toString('base64'),
     };
+    console.log(requestData);
 
     const options = {
       method: 'POST',
       data: requestData,
-      contentType: 'json',
+      contentType: 'text',
       dataType: 'text',
     };
 
     const result = await ctx.curl('http://127.0.0.1:7002/request', options);
-    console.log('------------local service------------');
-    console.log(result);
+    // console.log('------------local service------------');
+    // console.log(result);
     return result;
   }
 }

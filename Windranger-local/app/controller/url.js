@@ -4,11 +4,6 @@ const Controller = require('egg').Controller;
 
 class UrlController extends Controller {
   async getURL(ctx) {
-    // const url = ctx.request.body.url;
-    // const method = ctx.request.body.method;
-    // const encryptDetail = await ctx.service.cipher.
-    // const result = await ctx.service.url.requestRemoteServer(detail);
-
     // originRequestData 是crx 拦截的所有数据
     // {
     //   frameId: 0,
@@ -25,19 +20,23 @@ class UrlController extends Controller {
 
     // 生成一个加密数据的256长度数组
     const encodePassword = await ctx.service.cipher.generateRandomPassword();
+    console.log(11111, encodePassword);
 
     // 加密数据
     const encryptData = await ctx.service.securitySocket.encodeBuffer(dataBuffer, encodePassword);
-    console.log(encryptData);
+    console.log(222222, encryptData);
+
+    // 加密数据以后就要把加密过的数据和加密数组一并发过去。
+    const result = await ctx.service.url.requestRemoteServer(encryptData, encodePassword);
+    console.log(333333, result);
 
     // 生成一个对应加密数组的解密数组
-    const decodePassword = await ctx.service.cipher.createCipher(encodePassword);
+    // const decodePassword = await ctx.service.cipher.createCipher(encodePassword);
+    // console.log(22222, decodePassword);
 
     // 解密数据
-    const trueData = await ctx.service.securitySocket.decodeBuffer(encryptData, decodePassword);
-    console.log(99999, trueData);
-    // const encryptRequestData = await ctx.service.securitySocket.encodeBuffer(originRequestData);
-    // ctx.body = result;
+    // const trueData = await ctx.service.securitySocket.decodeBuffer(encryptData, decodePassword);
+    // console.log(99999, trueData);
   }
 
   async test() {
