@@ -5,22 +5,21 @@ const Service = require('egg').Service;
 // const querystring = require('querystring');
 
 class HandlerService extends Service {
-  async proxy(_url, _method) {
+  async proxy(requestData) {
     const { ctx } = this;
-    if (_method === 'GET') {
+    const url = requestData.url;
+    const method = requestData.method;
+
+    if (method === 'GET') {
+      const result = ctx.curl(url);
+      return result;
+    } else if (method === 'POST') {
       const options = {
+        method: 'POST',
         dataType: 'text',
       };
-      const result = await ctx.curl(_url, options);
-      console.log('------service proxy-------');
-      console.log(result.data);
-      return result.data;
-    } else if (_method === 'POST') {
-      console.log('------jump in POST--------');
-    } else if (_method === 'PUT') {
-      console.log('------jump in PUT--------');
-    } else {
-      console.log('------jump in DELETE--------');
+      const result = ctx.curl(url, options);
+      return result;
     }
   }
 }

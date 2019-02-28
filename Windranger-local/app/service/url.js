@@ -12,7 +12,6 @@ class UrlService extends Service {
       encryptData: _data.toString('base64'),
       encode: encodePassword.toString('base64'),
     };
-    console.log(requestData);
 
     const options = {
       method: 'POST',

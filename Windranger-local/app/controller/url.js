@@ -28,7 +28,18 @@ class UrlController extends Controller {
 
     // 加密数据以后就要把加密过的数据和加密数组一并发过去。
     const result = await ctx.service.url.requestRemoteServer(encryptData, encodePassword);
-    console.log(333333, result);
+    const resultJSON = JSON.parse(result.data);
+    const encryptResult64 = resultJSON.result;
+
+    const encryptResult = Buffer.from(encryptResult64, 'base64');
+
+    // 生成对应的解密 密码
+    const decodePassword = await ctx.service.cipher.createCipher(encodePassword);
+
+    const trueResult = await ctx.service.securitySocket.decodeBuffer(encryptResult, decodePassword);
+    console.log(7461, trueResult.toString());
+    // const trueData64 = result.data
+
 
     // 生成一个对应加密数组的解密数组
     // const decodePassword = await ctx.service.cipher.createCipher(encodePassword);
