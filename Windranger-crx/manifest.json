@@ -3,51 +3,40 @@
   "name": "Windranger",
   "version": "1.0.0",
   "description": "It's a simple version shadowsocks.",
-  "icons": {
-    "16": "image/ssicon.png",
-    "48": "image/ssicon.png",
-    "128": "image/ssicon.png"
+	"browser_action": {
+		"default_icon": "images/ssicon.png",
+		"default_title": "A wind of change is blowing.",
+		"default_popup": "html/popup.html"
+	},
+
+	"author": "hanqizheng",
+
+	"background":{
+		"scripts":[
+			"scripts/jquery-1.11.3.min.js",
+			"scripts/background.js"
+		]
+	},
+
+	"icons": {
+    "16": "images/ssicon.png",
+    "48": "images/ssicon.png",
+    "128": "images/ssicon.png"
   },
 
-  "author": "hanqizheng",
-
-  "browser_action": {
-    "default_icon": "image/ssicon.png",
-    "default_title": "A wind of change is blowing.",
-    "default_popup": "popup.html"
-  },
-
-  "permissions": [
-    "webRequest",
+	"permissions": [
+		"proxy",
+		"webRequest",
     "webRequestBlocking",
     "http://127.0.0.1:7001/*",
     "http://*/*",
     "https://*/*",
     "<all_urls>"
-  ],
+	],
 
-  "background": {
-    "scripts": [
-      "js/background.js",
-      "js/jquery.js"
-    ],
-    "president": false
-  },
-
-  "options_ui":
+	"options_ui":
   {
-      "page": "options.html",
+      "page": "./html/options.html",
       "open_in_tab": true
-  },
-
-  "content_scripts": [{
-    "matches": [
-        "<all_urls>"
-    ],
-    "js": [
-        "js/jquery.js",
-        "js/content.js"
-    ],
-    "run_at": "document_start"
-  }]
+  }
 }

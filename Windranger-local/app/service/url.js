@@ -20,7 +20,7 @@ class UrlService extends Service {
       dataType: 'text',
     };
 
-    const result = await ctx.curl('http://127.0.0.1:7002/request', options);
+    const result = await ctx.curl('http://149.28.74.184:1234/request', options);
     // console.log('------------local service------------');
     // console.log(result);
     return result;
