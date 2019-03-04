@@ -1,9 +1,18 @@
-body{font-size:14px;font-family: "Monaco", "Hiragino Sans GB", "Microsoft YaHei", Trebuchet, "Trebuchet MS",
-    Tahoma,"Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;}
+body {
+    font-size:14px;
+    font-family: "Monaco", "Hiragino Sans GB", "Microsoft YaHei", Trebuchet, "Trebuchet MS",
+    Tahoma,"Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+}
 
-*{outline:none;}
+* {
+    outline:none;
+}
 
-h1,h2,ul{padding:0;margin:0;font-size:16px;}
+h1,h2,ul {
+    padding:0;
+    margin:0;
+    font-size:16px;
+}
 ul{list-style: none;}
 
 .fl{float:left}
@@ -34,7 +43,6 @@ ul{list-style: none;}
 .side{width:200px;height:519px;}
 .side_title{height:40px;line-height:40px;}
 .side_list{height:479px;overflow-y:auto;}
-.side ul{}
 .side ul li{height:30px;line-height:30px;background-color:#f7f7f7;padding:0 10px;position:relative;border-bottom:1px solid #eee;}
 .side ul li span.site_list_del{cursor:pointer;float:right;font-size:12px;color:#999;}
 .side ul li span.site_list_name{width:150px;height:30px;line-height:30px;overflow:hidden;font-size:12px;}

@@ -28,8 +28,8 @@ var WindrangerBack = {
       '*google\.com*'
     ],
     defaultServer: {
-      'host': '112.124.25.173',
-      'port': '7071'
+      'host': '',
+      'port': ''
     }
   },
 

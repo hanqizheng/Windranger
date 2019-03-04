@@ -1,36 +1,61 @@
-<!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Popup Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <link rel="stylesheet" type="text/css" href="../style/popup-page.css" />
+  <title>Windranger</title>
+  <link href="../style/popup.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script type="text/javascript" src="../scripts/jquery-1.11.3.min.js"></script>
 </head>
-<body>
-  <!-- <canvas id="demoCanvas" class="canvas"></canvas> -->
-  <div class="body">
-    <div class="text">Windranger</div>
 
-    <div class="login">
-      <div class="center-text">
-        <p>host:</p>
-        <input type="text" class="input">
+<body>
+  <div class="container">
+    <div class="windranger-title  ">
+      <h1>WINDRANGER</h1>
+    </div>
+    <div>
+      <div class="content-left">
+        <div>
+          <h1 class="server-text">服务器</h1>
+          <div>
+            <div class="content-left-text">
+              <span>HOST:</span>
+            </div>
+            <input type="text" id="host" class="content-left-input" placeholder="127.0.0.1" />
+            <div class="content-left-text">
+              <span>PORT:</span>
+            </div>
+            <input type="text" id="port" class="content-left-input" placeholder="8080" />
+          </div>
+          <div>
+            <button id="save_server" class="content-left-button">确定</button>
+          </div>
+        </div>
+        <div>
+          <h1 class="add-site-text">添加站点</h1>
+          <div>
+            <div class="content-left-text">
+              <span>SITE:</span>
+            </div>
+            <input type="text" id="site" class="content-left-input" placeholder="google.com" />
+          </div>
+          <div>
+            <button id="save_site" class="content-left-button">确定</button>
+          </div>
+        </div>
       </div>
-      <div class="center-text">
-        <p>port:</p>
-        <input type="text" class="input">
+      <div class="content-right">
+        <h1 class="support-site-text">支持站点</h1>
+        <div id="site_list">
+          数据加载中...
+        </div>
       </div>
-      <div class="center-text">
-        <p>password:</p>
-        <input type="password" class="input">
+      <div class="content-footer">
+        <a href="https://www.github.com/hanqizheng" class="footer-link"><i class="fab fa-github fa-2x footer-icon">&nbsp;HanQZ</i></a>
       </div>
     </div>
-
-    <a class="addButton" href="./options.html">Add</a>
   </div>
+  <script type="text/javascript" src="../scripts/unproxy.js"></script>
 </body>
-
 
 </html>
