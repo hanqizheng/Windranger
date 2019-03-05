@@ -26,12 +26,9 @@ npm start
 
 ### crx
 
-<iframe height=500 width=500 src="./readmeSourcre/overview.gif">
+![](redemeSource/view.gif)
 
+[crx扩展下载链接](https://github.com/hanqizheng/Windranger/blob/master/Windranger-crx/Windranger-crx.crx)
 
-![](https://cl.ly/6fdaeac9b76d)
-[crx扩展下载链接]()
-
-扩展日后会放在release里面，现在没做好就先不给出了。
 
 
