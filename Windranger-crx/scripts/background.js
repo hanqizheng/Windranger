@@ -337,6 +337,7 @@ var WindrangerBack = {
     );    
   },
 
+
   /**
    * 初妈化
    */
@@ -346,6 +347,7 @@ var WindrangerBack = {
     // 检查代理开头是否开启
     this.checkSwitch();
     this.interceptRequest();
+    // this.changeStyle();
   }
 };
 

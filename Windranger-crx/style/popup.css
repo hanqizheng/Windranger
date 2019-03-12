@@ -33,9 +33,118 @@
   color: #63c78a
 }
 
+.content-left-button-box {
+  overflow: auto;
+  width: 200;
+  height: 47;
+  position: relative;
+}
 
+.content-left-linkButton {
+  width: 95px;
+  margin-top: 15px;
+  background-color: #e2e2e2;
+  border-radius: 6px;
+  border-style: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: absolute;
+  left: 0px;
+  text-align: center;
+  white-space: nowrap;  
+  color: #63c78a;
+  display: block;
+  transition-duration: 400ms;
+  float: left;
+}
 
-.content-left-button {
+/* .content-left-linkButton:hover {
+  width: 150px;
+  background-color: #63c78a;
+  border-color: #63c78a;
+  color: #fff;
+  transition-duration: 400ms;
+} */
+
+/* .content-left-linkButton:hover + .biggerLinkButton {
+  width: 150px;
+  background-color: #63c78a;
+  border-color: #63c78a;
+  color: #fff;
+  transition-duration: 400ms;
+} */
+
+/* .content-left-linkButton:hover + .smallerCancleButton {
+  width: 40px;
+  background-color: #ec5c57;
+  border-color: #ec5c57;
+  color: #fff;
+  font-size: 7px;
+  text-align: center;
+  transition-duration: 400ms;
+} */
+
+.content-left-cancleButton {
+  width: 95px;
+  margin-top: 15px;
+  margin-left: 10px;
+  background-color: #e2e2e2;
+  border-radius: 6px;
+  border-style: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  white-space: nowrap;
+  color: #ec5c57;
+  display: block;
+  transition-duration: 400ms;
+  float: left;
+}
+
+/* .content-left-cancleButton:hover {
+  width: 150px;
+  background-color: #ec5c57;
+  border-color: #ec5c57;
+  color: #fff;
+  transition-duration: 400ms;
+} */
+
+/* .biggerCancleButton {
+  width: 150px;
+  background-color: #ec5c57;
+  border-color: #ec5c57;
+  color: #fff;
+  transition-duration: 400ms;
+} */
+/* #cancle_server:hover ~ button .content-left-button-box button:nth-of-type(1){
+  width: 40px;
+  background-color: #63c78a;
+  border-color: #63c78a;
+  color: #fff;
+  font-size: 7px;
+  text-align: center;
+  transition-duration: 400ms;
+}
+
+.content-left-cancleButton:hover button:nth-of-type(0){
+  width: 40px;
+  background-color: #63c78a;
+  border-color: #63c78a;
+  color: #fff;
+  font-size: 7px;
+  text-align: center;
+  transition-duration: 400ms;
+} */
+
+.content-left-addButton {
   width: 200px;
   margin-top: 15px;
   background-color: #e2e2e2;
@@ -54,7 +163,7 @@
   transition-duration: 500ms;
 }
 
-.content-left-button:hover {
+.content-left-addButton:hover {
   background-color: #63c78a;
   border-color: #63c78a;
   color: #fff;
@@ -160,6 +269,7 @@
 }
 
 .add-site-text {
+  clear: both;
   margin-top: 15px;
   margin-bottom: 10px;
   color: #39995e;

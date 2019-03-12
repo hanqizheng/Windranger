@@ -39,13 +39,16 @@ var Windranger = {
           alert('host和port都不能为空');
           return false;
         }
-
         Windranger.sendMessageBack('saveServer', {
           'host': host,
           'port': port
         }, function (res) {
           alert(res.msg);
         });
+      });
+
+      $('#cancle_server').click(function() {
+        alert('已断开');
       });
 
       // 保存站点
@@ -63,13 +66,6 @@ var Windranger = {
           }
           alert(res.msg);
         });
-      });
-
-      // 开关
-      $('#switch').click(function () {
-        if (confirm('确定要关闭代理吗？')) {
-          alert('怎么可能会有这样的功能呢!^^');
-        }
       });
     },
 
@@ -98,7 +94,158 @@ var Windranger = {
           });
         }
       });
-    }
+    },
+
+    changeStyle: function() {
+      $('#cancle_server').hover(function() {
+        $('#save_server').css({
+          "width": "40px",
+          "background-color": "#63c78a",
+          "border-color": "#63c78a",
+          "color": '#fff',
+          "font-size": "7px",
+          "padding-left": "0px",
+          "padding-right": "0px",
+          "transition-duration": "400ms"
+        });
+        $('#cancle_server').css({
+          "width": "150px",
+          "background-color": "#ec5c57",
+          "border-color": "#ec5c57",
+          "color": "#fff",
+          "transition-duration": "400ms",
+        });
+      }, function() {
+        $('#save_server').css({
+          "width": "95px",
+          "margin-top": "15px",
+          "background-color": "#e2e2e2",
+          "border-radius": "6px",
+          "border-style": "none",
+          "cursor": "pointer",
+          "font-size": "14px",
+          "font-weight": "bold",
+          "line-height": "20px",
+          "padding": "6px 16px",
+          "position": "absolute",
+          "left": "0px",
+          "text-align": "center",
+          "white-space": "nowrap",  
+          "color": "#63c78a",
+          "display": "block",
+          "transition-duration": "400ms",
+          "float": "left",
+        });
+
+        $('#cancle_server').css({
+          "width": "95px",
+          "margin-top": "15px",
+          "background-color": "#e2e2e2",
+          "border-radius": "6px",
+          "border-style": "none",
+          "cursor": "pointer",
+          "font-size": "14px",
+          "font-weight": "bold",
+          "line-height": "20px",
+          "padding": "6px 16px",
+          "position": "absolute",
+          "right": "0px",
+          "text-align": "center",
+          "white-space": "nowrap",  
+          "color": "#ec5c57",
+          "display": "block",
+          "transition-duration": "400ms",
+          "float": "left",
+        });
+      });
+
+      $('#save_server').hover(function () {
+        $('#save_server').css({
+          "width": "150px",
+          "background-color": "#63c78a",
+          "border-color": "#63c78a",
+          "color": "#fff",
+          "transition-duration": "400ms",
+        });
+        $('#cancle_server').css({
+          "width": "40px",
+          "background-color": "#ec5c57",
+          "border-color": "#ec5c57",
+          "color": '#fff',
+          "font-size": "7px",
+          "padding-left": "0px",
+          "padding-right": "0px",
+          "transition-duration": "400ms"
+        });
+      }, function() {
+        $('#cancle_server').css({
+          "width": "95px",
+          "margin-top": "15px",
+          "background-color": "#e2e2e2",
+          "border-radius": "6px",
+          "border-style": "none",
+          "cursor": "pointer",
+          "font-size": "14px",
+          "font-weight": "bold",
+          "line-height": "20px",
+          "padding": "6px 16px",
+          "position": "absolute",
+          "right": "0px",
+          "text-align": "center",
+          "white-space": "nowrap",  
+          "color": "#ec5c57",
+          "display": "block",
+          "transition-duration": "400ms",
+          "float": "left",
+        });
+
+        $('#save_server').css({
+          "width": "95px",
+          "margin-top": "15px",
+          "background-color": "#e2e2e2",
+          "border-radius": "6px",
+          "border-style": "none",
+          "cursor": "pointer",
+          "font-size": "14px",
+          "font-weight": "bold",
+          "line-height": "20px",
+          "padding": "6px 16px",
+          "position": "absolute",
+          "left": "0px",
+          "text-align": "center",
+          "white-space": "nowrap",  
+          "color": "#63c78a",
+          "display": "block",
+          "transition-duration": "400ms",
+          "float": "left",
+        });
+      });
+    },
+
+
+      // }, function() {
+      //   $('#cancle_server').css({
+      //     "width": "95px",
+      //     "margin-top": "15px",
+      //     "background-color": "#e2e2e2",
+      //     "border-radius": "6px",
+      //     "border-style": "none",
+      //     "cursor": "pointer",
+      //     "font-size": "14px",
+      //     "font-weight": "bold",
+      //     "line-height": "20px",
+      //     "padding": "6px 16px",
+      //     "position": "absolute",
+      //     "right": "0px",
+      //     "text-align": "center",
+      //     "white-space": "nowrap",  
+      //     "color": "#ec5c57",
+      //     "display": "block",
+      //     "transition-duration": "400ms",
+      //     "float": "left",
+      //   });
+      // });
+    // }
   },
 
   /**
@@ -116,6 +263,7 @@ var Windranger = {
     this.getData();
     // 监听
     this.listen.save();
+    this.listen.changeStyle();
   }
 };
 

@@ -6,6 +6,7 @@
   <link href="../style/popup.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script type="text/javascript" src="../scripts/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="../scripts/popup-ac.js"></script>
 </head>
 
 <body>
@@ -27,8 +28,9 @@
             </div>
             <input type="text" id="port" class="content-left-input" placeholder="8080" />
           </div>
-          <div>
-            <button id="save_server" class="content-left-button">确定</button>
+          <div class="content-left-button-box" id="box">
+            <button id="save_server" class="content-left-linkButton">连接</button>
+            <button id="cancle_server" class="content-left-cancleButton smallerCancleButton">断开</button>
           </div>
         </div>
         <div>
@@ -40,7 +42,7 @@
             <input type="text" id="site" class="content-left-input" placeholder="google.com" />
           </div>
           <div>
-            <button id="save_site" class="content-left-button">确定</button>
+            <button id="save_site" class="content-left-addButton">添加</button>
           </div>
         </div>
       </div>
