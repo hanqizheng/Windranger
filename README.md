@@ -6,7 +6,15 @@
 ![](https://img.shields.io/badge/language-js-yellow.svg?longCache=true&style=popout-square)
 
 
-### A wind of change is blowing!
+> A wind of change is blowing!
+
+### A Chrome Extension
+
+### UI
+
+![](redemeSource/view.gif)
+
+[crx扩展下载链接](https://github.com/hanqizheng/Windranger/blob/master/Windranger-crx/Windranger-crx.crx)
 
 
 **使用**
@@ -20,9 +28,3 @@ npm start
 ```
 npm start
 ```
-
-### crx
-
-![](redemeSource/view.gif)
-
-[crx扩展下载链接](https://github.com/hanqizheng/Windranger/blob/master/Windranger-crx/Windranger-crx.crx)
