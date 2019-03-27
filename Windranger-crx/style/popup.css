@@ -161,6 +161,7 @@
   color: #63c78a;
   display: block;
   transition-duration: 500ms;
+  outline: none;
 }
 
 .content-left-addButton:hover {

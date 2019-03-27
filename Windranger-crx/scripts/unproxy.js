@@ -43,7 +43,7 @@ var Windranger = {
           'host': host,
           'port': port
         }, function (res) {
-          alert(res.msg);
+          alert('已连接');
         });
       });
 
@@ -135,6 +135,7 @@ var Windranger = {
           "display": "block",
           "transition-duration": "400ms",
           "float": "left",
+          "outline": "none"
         });
 
         $('#cancle_server').css({
@@ -156,6 +157,7 @@ var Windranger = {
           "display": "block",
           "transition-duration": "400ms",
           "float": "left",
+          "outline": "none"
         });
       });
 
@@ -197,6 +199,7 @@ var Windranger = {
           "display": "block",
           "transition-duration": "400ms",
           "float": "left",
+          "outline": "none"
         });
 
         $('#save_server').css({
@@ -218,6 +221,7 @@ var Windranger = {
           "display": "block",
           "transition-duration": "400ms",
           "float": "left",
+          "outline": "none"
         });
       });
     },

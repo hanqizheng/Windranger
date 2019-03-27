@@ -1,7 +1,7 @@
 # Windranger
 
 ![](https://img.shields.io/badge/name-windranger-brightgreen.svg?longCache=true&style=popout-square) 
-![](https://img.shields.io/badge/complete-70%-red.svg?longCache=true&style=popout-square)
+![](https://img.shields.io/badge/complete-no-red.svg?longCache=true&style=popout-square)
 ![](https://img.shields.io/badge/level-freshman-blue.svg?longCache=true&style=popout-square)
 ![](https://img.shields.io/badge/language-js-yellow.svg?longCache=true&style=popout-square)
 
