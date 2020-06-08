@@ -14,7 +14,7 @@
 
 ![](redemeSource/view.gif)
 
-[crx扩展下载链接](https://github.com/hanqizheng/Windranger/blob/master/Windranger-crx/Windranger-crx.crx)
+[crx扩展下载链接](https://github.com/hanqizheng/Windranger/blob/master/Windranger-crx/Windranger-crx.crx)(已经失效没有维护)
 
 
 **使用**
